@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+ul{
+	color:#00ff00;
+	height:120px;
+	}
+#main{
+	height:655px;
+	width:1200px;}
+#left{
+	float:left;
+	width:260px;
+	height:651px;
+	}
+#s{
+	height:15px;
+	padding-top:2px;
+	background:#00ff00;
+}
+
+#right{
+	float:right;
+	width:900px;
+	height:651px;}
+li{
+	list-style-type:none;
+	cursor:pointer;
+	padding-top:5px;
+	font-size:15px;
+	}
+li:hover{
+	color:red;}
+
+</style>
+<script src="js/jquery-1.6.1.min.js"> </script>
+<script src="jquery-ui.js"></script>
+<link href="jquery-ui.css" rel="Stylesheet" />
+<script>
+    $(function(){
+        $("#left").accordion();//变成手风琴格式
+        //$("#left").width(250);//修改手风琴样式
+  });
+</script>
+
+</head>
+<body>
+<div id="main">
+	<div id="left">
+	<div id="s">第一周</div>
+	<ul>
+		<li onclick="a('h1.html');">hello world</li>
+		<li onclick="a('h2.html');">显示当前的时间</li>
+
+	</ul>
+	<div id="s">第二周</div>
+	<ul>
+		<li onclick="a('h21.html');"> 动态标题栏和背景自动变色</li>
+		<li onclick="a('h22.html');">显示当前页面的URL</li>
+		<li onclick="a('h23.html');">修改当前页面的URL</li>
+		<li onclick="a('h24.html');">获取当前网页状态</li>
+		<li onclick="a('h25.html');">动态文本框</li>
+
+	</ul>
+	<div id="s">第三周</div>
+	<ul>
+		<li onclick="a('h31.html');">JSON遍历</li>
+		<li onclick="a('h32.html');">JSON应用</li>
+		<li onclick="a('h33.html');">JSON应用（两层结构）</li>
+		<li onclick="a('h34.html');">JSON应用（三层结构）</li>
+	</ul>
+	<div id="s">第四周</div>
+	<ul>	
+		<li onclick="a('h42.html');">正则表达式</li>
+		<li onclick="a('h41.html');">用程序测试正则表达式</li>
+	</ul>
+	<div id="s">第五周</div>	
+	<ul>
+		<li onclick="a('h51.html');">用程序修改边框加时钟</li>
+		<li onclick="a('h52.html');">表格制作</li>
+		<li onclick="a('h54.html');">百叶窗（上下方向）</li>
+		<li onclick="a('h53.html');">百叶窗（左右方向）</li>
+	</ul>
+	<div id="s">第六周</div>	
+	<ul>
+		<li onclick="a('h61.html');">限制表格宽度</li>
+		<li onclick="a('h62.html');">滚动鼠标改变图片大小</li>
+		<li onclick="a('h63.html');">移动光环</li>
+		<li onclick="a('h64.html');">编辑单元格文本信息</li>
+	</ul>
+	<div id="s">第七周</div>	
+	<ul>
+		<li onclick="a('h417A.html');">编辑单元格文本信息</li>
+		<li onclick="a('h417B.html');">面向对象编程的应用</li>
+		<li onclick="a('h417C.html');">创建多个节点</li>
+		<li onclick="a('h417D.html');">插入节点</li>
+	</ul>
+	<div id="s">第八周</div>	
+	<ul>
+		<li onclick="a('h23.1.html');">jQueryID选择器</li>
+		<li onclick="a('h23.2.html');">jQuery元素选择器</li>
+		<li onclick="a('h23.3.html');">jQuery类名选择器</li>
+		<li onclick="a('h23.4.html');">jQuery复合选择器</li>
+		<li onclick="a('h23.5.html');">状态栏</li>
+	</ul>
+	<div id="s">第十周（层级选择器）</div>	
+	<ul>
+		<li onclick="a('H508A.html');">ancestor descendan选择器</li>
+		<li onclick="a('H508B.html');">parent>child选择器</li>
+		<li onclick="a('H508C.html');">prev+next选择器</li>
+		<li onclick="a('H508D.html');">prev~siiblings选择器</li>
+	</ul>
+	<div id="s">第十一周</div>	
+	<ul>
+		<li onclick="a('h23.16.html');">设置HTML的内容</li>
+		<li onclick="a('h23.17.html');">设置多行列表框</li>
+		<li onclick="a('h23.8.html');">创建节点</li>
+		<li onclick="a('h23.9.html');">删除、复制与替换节点</li>
+		<li onclick="a('h23.18.html');">应用JQuery对DOM节点操作</li>
+	</ul>
+	<div id="s">第十二周（jQ事件处理）</div>	
+	<ul>
+		<li onclick="a('h23.19.html');">事件绑定与模拟用户操作</li>
+		<li onclick="a('h23.19a.html');">模仿悬停事件</li>
+		<li onclick="a('h23.20.html');">事件捕捉与冒泡</li>
+	</ul>
+	<div id="s">第十三周</div>	
+	<ul>
+		<li onclick="a('h21.1.html');">jQuery中使用Ajax</li>
+
+	</ul>
+	<div id="s">第十四周</div>	
+	<ul>
+		<li onclick="a('605a.html');">把数据库中的数据查询出来</li>
+		<li onclick="a('605b.html');">修改数据库中的数据</li>
+		<li onclick="a('605c.html');">删除数据库中的数据</li>
+		<li onclick="a('605f.html');">jQuery-ui应用实例</li>
+	</ul>
+	<div id="s">第十五周</div>	
+	<ul>
+		<li onclick="a('12A.html');">table的制作</li>
+		<li onclick="a('12B.html');">菜单的制作</li>
+	</ul>
+	<div id="s">第十六周</div>	
+	<ul>
+		<li onclick="a('H619A.htm');">append与insertAfter</li>
+		<li onclick="a('H619B.htm');">插件的应用</li>
+	</ul>
+	</div>
+	<div id="right">
+	<iframe id="frm" src="h.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+	</div>
+</div>
+<script>
+	function a(s){
+		var c=document.getElementById("frm");
+		c.src=s;}
+</script>
+</body>
+</html>
+

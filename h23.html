@@ -1,0 +1,24 @@
+<!Doctype>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+<input type="text" name="titleName" id="txt"/>
+<input type="button" value="Go" onclick="setURL()"/>
+
+<script>
+	document.write("当前页面URL为:" +document.URL);
+	function setURL(t){
+	var d=document.getElementById("txt");
+	window.open(d.value,"_self");
+}
+
+
+	
+
+</script>
+</body>
+</html>

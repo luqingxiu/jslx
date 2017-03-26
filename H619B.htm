@@ -1,0 +1,62 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<script  src="js/jquery-1.6.1.min.js"></script>
+<script src="jquery-ui.js" ></script>
+<script src="myplugin.js" ></script>
+<link href="jquery-ui.css"  rel="stylesheet" type="text/css"/>
+
+<style>
+    *{padding:0;margin:0;}
+.ul{list-style:none;background:#FF0; border:1px solid #ddd;
+    display:table;}
+a{text-decoration:none;color:#000;}
+.mytab{
+    width:600px;height:43px;border-bottom:1px solid #e3e3e3;}
+.mytab li a {
+width:110px;height:40px;float:left;cursor:pointer;border-right:1px solid #eee;
+border-bottom:1px solid #eee;background:#f0f0f0;
+line-height:40px;text-align:center;
+    }
+.mytab li{float:left;}
+.mytab li .focus{background:#fff;border-bottom:0px;}
+.panel
+{   background:#dddddd;
+    border:1px solid #999;
+    height:500px;
+    width:100%;
+    border-radius:5px;
+}
+#tabs
+{margin-left:10px;border:1px;solid #e3e3e3;border-radius:5px;margin-top:10px;
+ width:700px;
+ background:#E78F08;
+}
+</style>
+<script>
+    $(function(){
+ //   $("#tabs").tabs();
+      $("#tabs").augTabs();
+});
+  
+</script>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs1">我的大学</a></li>
+        <li><a href="#tabs2">我的爱好</a></li>
+    </ul>
+    <div id="tabs1">
+        迎宾大道 花都校区
+        <img src="m1.jpg" />
+    </div>
+    <div id="tabs2" style="display:none">
+        我讨厌计算机
+        <img src="m2.jpg" />
+    </div>
+</div>
+</body>
+
+</html>

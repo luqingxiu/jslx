@@ -1,0 +1,50 @@
+<!Doctype>
+<html>
+<head>
+<style>
+.main{
+
+
+	float:right;
+	width:900px;
+	height:652px;
+	background:#00ff00;
+	}
+.default{
+	margin-top:25px;
+	margin-left:200px;
+	font-family:"楷体";
+	font-size:50px;
+	color:#000fff;
+}
+#status{
+	
+	margin-top:230px;
+	font-family:"楷体";
+	font-size:27px;
+    	text-align:center;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("p").eq(0).mouseover(function(){
+            $("#status").html("欢迎浏览我的作业！");
+        });
+        $("p").eq(0).mouseout(function(){
+            $("#status").html("欢迎再次浏览！");
+        });
+    });
+  
+</script>
+</head>
+<body>
+<div class="main">
+<p class="default"><br>班级：13计算机师范班</br>
+		   <br>姓名：陆清秀</br>
+		   <br>学号：13551102046</br></p>
+
+<onclick="a()" />
+<div id="status"></div></div>
+</body>
+</html>

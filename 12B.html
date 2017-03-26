@@ -1,0 +1,58 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+*{font-size:16px;}
+#dlg img{width:60px;height:60px;}  
+#menu{
+    width:120px;
+}  
+.submenu{
+    width:120px;
+}  
+    
+</style>
+<script src="jquery-1.6.1.min.js"> </script>
+<script src="jquery-ui.js"></script>
+<link href="jquery-ui.css" rel="Stylesheet" />
+  
+<script>
+    $(function(){
+        $("#menu").menu();
+    });//菜单的制作
+    
+</script>
+</head>
+<body>
+<ul id="menu">
+    <li>新闻联播
+        <ul class="submenu">
+            <li>国内新闻</li>
+            <li>广东新闻</li>
+            <li>国际新闻</li>
+        </ul>
+    </li>
+    <li><span class="ui-icon ui-icon-zoomin"></span>体育
+        <ul class="submenu">
+            <li>足球</li>
+            <li>篮球</li>
+            <li>羽毛球</li>
+        </ul>
+    </li>
+    <li>财经股票
+        <ul class="submenu">
+            <li>国内新闻</li>
+            <li>广东新闻</li>
+            <li>国际新闻</li>
+        </ul>    
+    </li>
+    <li>娱乐明星
+        <ul class="submenu">
+            <li>国内新闻</li>
+            <li>广东新闻</li>
+            <li>国际新闻</li>
+        </ul>    
+    </li>
+</ul>
+</body>
+</html>

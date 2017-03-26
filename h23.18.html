@@ -1,0 +1,197 @@
+<!Doctype>
+<html>
+<head>
+<style>
+#bg{
+    width:456px;
+    height:266px;
+    background:url(images/plowland.jpg);
+}
+.im0{
+    position:absolute;
+    top:85px;
+    left:195px;
+}
+.im1{
+    position:absolute;
+    top:115px;
+    left:255px;
+}
+.im2{
+    position:absolute;
+    top:45px;
+    left:125px;
+}
+.im3{
+    position:absolute;
+    top:15px;
+    left:55px;
+}
+.im4{
+    position:absolute;
+    top:85px;
+    left:55px;
+}
+.im5{
+    position:absolute;
+    top:85px;
+    left:325px;
+}
+.im6{
+    position:absolute;
+    top:115px;
+    left:385px;
+}
+.im7{
+    position:absolute;
+    top:115px;
+    left:125px;
+}
+.im8{
+    position:absolute;
+    top:155px;
+    left:195px;
+}
+.im9{
+    position:absolute;
+    top:155px;
+    left:325px;
+}
+.im10{
+    position:absolute;
+    top:45px;
+    left:255px;
+}
+.im11{
+    position:absolute;
+    top:45px;
+    left:-15px;
+}
+.im12{
+    position:absolute;
+    top:15px;
+    left:195px;
+}
+#seed{
+    background:url(images/btn_seed.png);
+    width:56px;
+    height:56px;
+    position:absolute;
+    top:229px;
+    left:49px;
+    cursor:pointer;
+}
+#grow{
+    background:url(images/btn_grow.png);
+    width:56px;
+    height:56px;
+    position:absolute;
+    top:229px;
+    left:154px;
+    cursor:pointer;
+}
+#bloom{
+    background:url(images/btn_bloom.png);
+    width:56px;
+    height:56px;
+    position:absolute;
+    top:229px;
+    left:259px;
+    cursor:pointer;
+}
+#fruit{
+    background:url(images/btn_fruit.png);
+    width:56px;
+    height:56px;
+    position:absolute;
+    top:229px;
+    left:368px;
+    cursor:pointer;
+}
+
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#seed").bind("click",function(){
+            $("img").remove();
+            $("#bg").prepend("<img class=im0 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im1 src='images/seed.png'/>");
+            $("#bg").prepend("<img class=im2 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im3 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im4 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im5 src='images/seed.png'/>");
+            $("#bg").prepend("<img class=im6 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im7 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im8 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im9 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im10 src='images/seed.png'/>");
+            $("#bg").prepend("<img class=im11 src='images/seed.png'/>"); 
+            $("#bg").prepend("<img class=im12 src='images/seed.png'/>"); 
+ 
+
+        });
+        $("#grow").click(function(){
+            $("img").remove();
+            $("#bg").append("<img class=im0 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im1 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im2 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im3 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im4 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im5 src='images/grow.png'/>");
+            $("#bg").append("<img class=im6 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im7 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im8 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im9 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im10 src='images/grow.png'/>"); 
+            $("#bg").append("<img class=im11 src='images/grow.png'/>");
+            $("#bg").append("<img class=im12 src='images/grow.png'/>"); 
+        });
+        $("#bloom").click(function(){
+            $(".im0").replaceWith("<img class=im0 src='images/bloom.png'/>");
+            $(".im1").replaceWith("<img class=im1 src='images/bloom.png'/>");
+            $(".im2").replaceWith("<img class=im2 src='images/bloom.png'/>");
+            $(".im3").replaceWith("<img class=im3 src='images/bloom.png'/>");
+            $(".im4").replaceWith("<img class=im4 src='images/bloom.png'/>");
+            $(".im5").replaceWith("<img class=im5 src='images/bloom.png'/>");
+            $(".im6").replaceWith("<img class=im6 src='images/bloom.png'/>");
+            $(".im7").replaceWith("<img class=im7 src='images/bloom.png'/>");  
+            $(".im8").replaceWith("<img class=im8 src='images/bloom.png'/>");
+            $(".im9").replaceWith("<img class=im9 src='images/bloom.png'/>");
+            $(".im10").replaceWith("<img class=im10 src='images/bloom.png'/>");
+            $(".im11").replaceWith("<img class=im11 src='images/bloom.png'/>");
+            $(".im12").replaceWith("<img class=im12 src='images/bloom.png'/>");    
+        });
+        $("#fruit").click(function(){
+           // $("<img class=im0 src='images/fruit.png'/>").replaceAll("img"); 
+            $(".im0").replaceWith("<img class=im0 src='images/fruit.png'/>");
+            $(".im1").replaceWith("<img class=im1 src='images/fruit.png'/>");
+            $(".im2").replaceWith("<img class=im2 src='images/fruit.png'/>");
+            $(".im3").replaceWith("<img class=im3 src='images/fruit.png'/>");
+            $(".im4").replaceWith("<img class=im4 src='images/fruit.png'/>");
+            $(".im5").replaceWith("<img class=im5 src='images/fruit.png'/>");
+            $(".im6").replaceWith("<img class=im6 src='images/fruit.png'/>");
+            $(".im7").replaceWith("<img class=im7 src='images/fruit.png'/>");
+            $(".im8").replaceWith("<img class=im8 src='images/fruit.png'/>");
+            $(".im9").replaceWith("<img class=im9 src='images/fruit.png'/>");
+            $(".im10").replaceWith("<img class=im10 src='images/fruit.png'/>");
+            $(".im11").replaceWith("<img class=im11 src='images/fruit.png'/>");
+            $(".im12").replaceWith("<img class=im12 src='images/fruit.png'/>");
+
+
+        });
+    });
+
+</script>
+</head>
+<body>
+<div id="bg">
+    <span id="seed"></span>
+    <span id="grow"></span>
+    <span id="bloom"></span>
+    <span id="fruit"></span>   
+</div>
+</body>
+
+
+</html>

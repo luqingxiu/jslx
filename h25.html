@@ -1,0 +1,61 @@
+<!Doctype>
+<html>
+<head>
+<style>
+#fml{
+	border:1px solid #dddddd;
+	width:300px;}
+.box{
+	margin-top:5px;
+	}
+	
+</style>
+</head>
+<body>
+<script>
+	function addText(){
+	var box=document.createElement("div");
+	var lbl=document.createElement("Label");
+	lbl.innerHTML="学号";
+	box.appendChild(lbl);
+	var txt=document.createElement("input");
+	txt.type="text";
+	txt.name="txt";
+	txt.value="";
+ 	box.appendChild(txt);
+	box.className="box"
+	fml.appendChild(box);
+
+	var box=document.createElement("div");
+	var lbl=document.createElement("Label");
+	lbl.innerHTML="姓名";
+	box.appendChild(lbl);
+	var txt=document.createElement("input");
+	txt.type="text";
+	txt.name="txt";
+	txt.value="";
+  	box.appendChild(txt);
+	box.className="box"
+	fml.appendChild(box);
+
+	var box=document.createElement("div");
+	var lbl=document.createElement("Label");
+	lbl.innerHTML="性别";
+	box.appendChild(lbl);
+	var txt=document.createElement("input");
+	txt.type="text";
+	txt.name="txt";
+	txt.value="";
+  	box.appendChild(txt);
+	box.className="box"
+	fml.appendChild(box);}
+</script>
+<div id="fml">
+</div>
+<input type="button" value="Go" onclick="addText()"/>
+
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+var s={"广州市": ["海珠区","花都区","天河区","越秀区"],
+　　"深圳市": ["罗湖区","南山区","福田区","宝安区"],
+　　"珠海市": ["香洲区","斗门区"]}
+for(var d in s){
+  document.write("<br/>"+d+":<br/>");
+  for(var city in s[d]){
+document.write(s[d][city]+",");
+}}
+
+
+   function addText(){
+   for(var d in s){
+var box=document.createElement("div");
+var lbl=document.createElement("Label");
+lbl.innerHTML=d;
+box.appendChild(lbl);
+var txt=document.createElement("input");
+txt.type="text";
+txt.name="txt";
+txt.value="";
+box.appendChild(txt);
+box.className="box"
+fml.appendChild(box);
+}}
+
+
+</script>
+<div id="fml">
+</div>
+<input type="botton"value="Go" onclick="addText()"/>
+<script>
+</script>
+</body>
+<html>

@@ -1,0 +1,73 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+    #fm1
+    {
+    	border:1px solid #dddddd;
+    	width:300px;
+    }
+    .box
+    {
+    	margin-top:15px;
+    	border-top:1px solid #999999;
+    }
+</style>
+
+</head>
+<body>
+<script>
+var s={"学号":[{"type":"label","width":"200","height":"5"},
+{"type":"text","width":"80","height":"2"}
+],
+"姓名":[
+{"type":"label","width":"300","height":"7"},
+{"type":"text","width":"150","height":"4"}
+],
+"性别":[
+{"type":"label","width":"200","height":"5"},
+{"type":"radiobutton","width":"100","height":"2"}
+]
+,
+"出生日期":[
+{"type":"label","width":"200","height":"5"},
+{"type":"text","width":"100","height":"2"}
+]
+,
+"籍贯":[
+{"type":"label","width":"200","height":"5"},
+{"type":"text","width":"100","height":"2"}
+]
+
+}
+
+    function addText(){
+    for(var d in s){
+        var box=document.createElement("div");
+        var lbl=document.createElement("Label");
+        lbl.innerHTML=d;
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.appendChild(txt);
+        box.className="box"
+        fm1.appendChild(box);
+  }
+            }
+</script>
+<div id="fm1">
+</div>
+
+<input type="button" value="Go" onclick="addText()" />
+
+
+<script>
+
+</script>
+</body>
+
+
+</html>

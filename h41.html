@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body> 
+正则表达式<input type="text" id="r"/>
+<br/>字符串<input type="text" id="t"/>
+<input type="button" value="测试" onclick="test()"/>
+<div id="tip"></div>
+<script>
+	function test(){
+	var r=document.getElementById("r").value;
+	var reg=new RegExp(r);
+	var t=document.getElementById("t").value;
+	var ret=reg.test(t);
+	if(ret)
+		document.getElementById("tip").innerHTML="匹配正确";
+	else
+		document.getElementById("tip").innerHTML="NONONO!!";}
+</script>
+
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype>
+<html>
+<head>
+</head>
+<body> 
+<script>
+    amount=ybase=15;
+    Color="#ffaaff";
+    Gc="#ff00ff";
+    xbase=-70;
+    step=c=0.05;
+    TS=360/amount;
+    xpos=ypos=currStep=Ci=0;
+    for(i=0;i<amount;i++)
+        document.write('<div id="Div" style="position:absolute;top:0px;left:0px;height:20;width:20;text-align:center"><B>.</B></div>')
+    function running(){
+        var MY=document.body.scrollTop+document.body.clientHeight/2+document.body.clientHeight/2.8*Math.cos(Ci/4)*Math.cos(Ci/10);
+        var MX=document.body.scrollLeft+document.body.clientWidth/2+document.body.clientWidth/2.4*Math.sin(Ci/6)*Math.sin(Ci/20);
+        ypos=MY;
+        xpos=MX;
+        for(i=0;i<amount;i++){
+            var d=Div[i].style;
+            if(d.pixeTop>ypos+2){
+                d.fontSize=36;
+                d.paddingTop=7;
+                d.filter='glow(color='+Gc+',strength=7)';
+                if(d.pixeTop>ypos+10){
+                    d.fontSize=30;
+                    d.paddingTop=10;
+                    d.filter='glow(color='+Gc+',strength=5)';
+                 }
+             }
+
+            else{
+                d.fontSize=25;
+                d.paddingTop=0;
+                d.color=Color;
+                d.filter='glow(color='+Gc+',strength=8)';
+            }
+            d.top=ypos+ybase*Math.sin(currStep+i*TS*Math.PI/180);
+            d.left=xpos+xbase*Math.cos(currStep+i*TS*Math.PI/180);
+        }
+        Ci+=c;
+        currStep+=step;
+        setTimeout('running()',20);
+    }
+        running();
+</script>
+</body>
+</html>

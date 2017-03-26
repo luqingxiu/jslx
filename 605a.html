@@ -1,0 +1,54 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+<script src="jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $("input[type=button]").click(save);
+        function save(){
+            var sno=$("#sno").val();
+            //var sql="SELECT * FROM  student WHERE 学号='"+sno+"'"; //详细查询
+            var sql="SELECT * FROM  student WHERE 学号 like'"+sno+"%'";//模糊查询
+            $.ajax({type:"get",
+                url:"http://114.215.171.206/lyh/ajax/ajax.php",
+                dataType:"jsonp",
+                data:"sql="+sql,
+                jsonp:"",
+                jsonpCallback:"jsonpCallback",
+                success:function(json){
+                    var status=json.status;
+                    if(status==0){
+                        var r=json.resultset;
+                        for(var i=0;i<r.length;i++){
+                            var p=document.createElement("p");
+                            for(var f in r[i]){
+                                var txt=document.createTextNode(f+":"+r[i][f]+",");
+                                p.appendChild(txt);
+                            }
+                            document.body.appendChild(p);
+                        }
+                     }
+                     else
+                        alert(json.errmsg);   
+                },
+                error:function(a,b,c){
+                        alert("查询失败");
+                }
+            
+            });       
+        }
+    });//把数据库中的数据查询出来
+
+</script>
+</head>
+<body>
+学号：<input type="text" id="sno" /><br />
+<input type="button" value="查询" />
+
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+<!Doctype>
+<html>
+<head>
+<style>
+div{
+    border:1px solid #003a75;
+    background:#cdf;
+    margin:5px;
+    width:75px;
+    height:35px;
+    float:left;
+    padding:5px;
+}//类型样式
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var myclass=$(".myclass");
+        myclass.css("background","#c50210");
+        myclass.css("color","#fff");
+    });//通过CSS命令改变类选择器的样式
+    function a(){
+        var d=document.getElementsByTagName("div")[1];
+        d.style.backgroundColor="#00ff00";
+    }//通过javascript改变样式
+
+</script>
+</head>
+<body>
+<div class="myclass">注意观察我的样式</div>//类型选择器
+<div>我的样式是默认的</div>
+<input type="button" value="CSS" onclick="a()" />
+</body>
+</html>

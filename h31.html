@@ -1,0 +1,94 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+    #fm1
+    {
+    	border:1px solid #dddddd;
+    	width:300px;
+    }
+    .box
+    {
+    	margin-top:15px;
+    	border-top:1px solid #999999;
+    }
+</style>
+
+</head>
+<body>
+<script>
+var s={"计算机系":[{"专业":"软件工程","人数":"200","班级":"5"},
+{"专业":"师范","人数":"300","班级":"6"},
+{"专业":"网络工程","人数":"80","班级":"2"}
+],
+"政法系":[
+{"专业":"法律","人数":"300","班级":"7"},
+{"专业":"历史","人数":"60","班级":"2"},
+{"专业":"旅游","人数":"150","班级":"4"}
+],
+"教育系":[
+{"专业":"学前教育","人数":"200","班级":"5"},
+{"专业":"特殊教育","人数":"100","班级":"2"}
+]}
+    for(var d in s){
+        document.write(d+":<br/>");
+        for (var i in s[d]){
+            document.write(" 专业:"+s[d][i].专业);
+            document.write(" 人数:"+s[d][i].人数);
+            document.write(" 班级数:"+s[d][i].班级+"<br/>");
+       }
+    }
+    //web2
+    function addText(){
+        var box=document.createElement("div");
+        var lbl=document.createElement("Label");
+        lbl.innerHTML="学号";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.appendChild(txt);
+        box.className="box"
+        fm1.appendChild(box);
+        
+        var box=document.createElement("div");
+        var lbl=document.createElement("Label");
+        lbl.innerHTML="姓名";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.className="box"
+        box.appendChild(txt);
+        fm1.appendChild(box);
+        
+        var box=document.createElement("div");
+         var lbl=document.createElement("Label");
+        lbl.innerHTML="性别";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.className="box"
+        box.appendChild(txt);       
+        fm1.appendChild(box);       
+           
+            }
+</script>
+<div id="fm1">
+</div>
+
+<input type="button" value="Go" onClick="addText()" />
+
+
+<script>
+
+</script>
+</body>
+
+
+</html>

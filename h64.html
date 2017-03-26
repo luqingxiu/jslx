@@ -1,0 +1,80 @@
+<!doctype>
+<html>
+<head>
+<style>
+table{border-collapse:collapse;}
+td{border:1px solid #666;}
+th{background:#ddd;border:1px solid #666666;}
+</style>
+</head>
+<body> 
+<table id="table1">
+<tr>
+<th>班级</th>
+<th>数学平均成绩</th>
+<th>语文平均成绩</th>
+</tr>
+<tr>
+<td>一年一班</td>
+<td>91</td>
+<td>90</td>
+</tr>
+<tr>
+<td>一年二班</td>
+<td>90</td>
+<td>85</td>
+</tr>
+
+</table>
+<input type="button" value="修改单元格信息" onclick="edit()" />
+<input type="text" id="celltext" />
+<script>
+    var s=null;
+    function select(element){
+        var e,r,c;
+        if(element==null)
+            e=even.srcElement;
+        else
+            e=element.toElement;
+        if(e.tagName=="TD"){
+            c=findCell(e);
+            if(c!=null){
+                if(s!=null) deselectRorC(s);
+                selectRorC(c);
+                s=c;
+             }
+         }
+         window.event.cancelBubble=ture;
+     }
+     table1.onclick=select;
+     function findCell(e){
+        if(e.tagName=="TD") return e;
+        else if(e.tagName=="BODY") return null;
+        else
+            return findCell(e.parentElement);
+     }
+     function selectRorC(r){
+        r.style.backgroundColor="#0000ff";//蓝色
+        r.style.color="#ffffff";//选定某个格子，背景改为蓝色，前景改为白色
+     }
+     function deselectRorC(r){
+            r.style.backgroundColor="";//蓝色
+            r.style.color="";
+     }
+     function edit(){
+        var c,p,nr;
+        if(s==null) return false;
+        c=s;
+        if(c.tagName!="TD") return false;
+        celltext.style.display="";
+        celltext.value=c.innerHTML;
+        celltext.focus();//focus:聚焦
+        celltext.onblur=unhook;
+     }
+     function unhook(){
+        celltext.value="";
+        celltext.style.display="none";
+     }            
+</script>
+</body>
+</html>

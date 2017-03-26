@@ -1,0 +1,30 @@
+<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+<script src="js/jquery-1.6.1.min.js"></script> 
+<script>
+    $(document).ready(function(){
+        $("input[type=button]").click(function(){
+            $("select").val(["JavaScript","数据库"]);
+            $("input[type=button]").val("好玩");//修改某一元素的value
+        });        
+    });
+
+</script>
+</head>
+<body>
+<select size="3" multiple="multiple" id="like">
+<option>JavaScript</option>
+<option selected="selected">数据库</option>
+<option selected="selected">多媒体设计</option>
+
+</select>
+<br />
+<input type="button" value="改变" />
+</body>
+
+
+</html>

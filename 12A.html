@@ -1,0 +1,65 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+*{font-size:16px;}
+#dlg img{width:60px;height:60px;}
+.tb{
+    height:500px;
+}
+iframe{
+    height:100%;width:100%;
+    margin:0;padding:0;}
+    
+</style>
+<script src="jquery-1.6.1.min.js"> </script>
+<script src="jquery-ui.js"></script>
+<link href="jquery-ui.css" rel="Stylesheet" />
+  
+<script>
+    $(function(){
+        $("#tabs").tabs();//变成tables格式
+        $("input[type=button]").button();//修改所以"type=button"的样式
+        //$("#addt").button();//修改button的样式
+        $("#addt").click(function(){
+            //var s=$("<li><a href='#tabs5'>我的业余生活</a><span class='ui-icon ui-icon-close' role='presentation'>Remove Tab</span></li>");//增加新的li
+            var s=$("<li><a href='#tabs5'>我的业余生活</a><span class='ui-icon ui-icon-close'></span></li>");//增加新的li
+            $("#nav").append(s);
+            var x=$("<div id='tabs5' class='tb'>业余生活</div>");//append内容进去(将内容写进去)
+            $("#tabs").append(x);
+            $("#tabs").tabs("refresh");//将tabs刷新一下 
+            
+            //$("#tabs").delegate("span.ui-icon-close","click",function(){
+            $("span.ui-icon-close").click(function(){
+                var pane1Id = $(this).closest("li").remove().att("aria-controls")//链式方法P456
+                $("#" + pane1Id).remove();
+                $("#tabs").tabs("refresh");
+            });//
+        });//给按钮绑定事件(增加table的东西)
+        $("#btnde1").click(function(){
+            $("li").eq(0).remove();
+            $("#tabs1").remove();
+            $("#tabs").tabs("refresh");
+        });//(删除table的东西)
+    });
+    
+</script>
+</head>
+<body>
+<input id="addt" type="button" value="增加" />
+<input id="btnde1" type="button" value="删除" />
+<div id="tabs">
+    <ul id="nav">
+        <li><a href="#tabs1">我的大学</a></li>
+        <li><a href="#tabs2">我的好友</a></li>
+        <li><a href="#tabs3">我的作品</a></li>
+        <li><a href="#tabs4">我的特长</a></li>
+    </ul>
+    <div id="tabs1" class="tb">大学的介绍</div>
+    <div id="tabs2" class="tb"><iframe src="http://www.sina.com.cn"></iframe></div>
+    <div id="tabs3" class="tb"><img src="b.jpg"/></div>
+    <div id="tabs4" class="tb">ffy好几天芙蓉姐姐又看见那个年纪还能trttjuy</div>
+</div>
+
+</body>
+</html>

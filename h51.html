@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+<script>
+var n=0;
+function a(){
+    n++;
+    if(n==3) n=0;
+    if(n==0)
+        var d=document.getElementById("t1").style.border="5px solid #ff0000";
+    else if(n==1)
+        var d=document.getElementById("t1").style.border="5px solid #bfefff";
+    else
+        var d=document.getElementById("t1").style.border="5px solid #00ff00";
+    var d=document.getElementById("t1").style.background="#bf3cff";
+    setTimeout("a()",1000);
+
+
+}
+</script>
+
+</head>
+<body> 
+<div id="t1"> Œ“∞Æ javascript</div>
+<input type="button" value="ø™ º" onclick="a()"/>
+</body>
+</html>

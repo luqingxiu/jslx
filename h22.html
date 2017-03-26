@@ -1,0 +1,46 @@
+<!Doctype>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+123456
+<div id="d1">aaa</div>
+<input type="button" value="开始" onclick="a()"/>
+<input type="button" value="创建" onclick="b()"/>
+<script>
+	document.write("当前页面URL为:" +document.URL);
+	var Ac=new Array("#00FF66","#FFFF99","#99CCFF","#FFCCFF","#FFCC99","#00FFFF"
+				,"#FFFF00","#FFCC00","#FF00FF");
+	var n=0;
+	var m=1;
+	function title(){
+	m++;
+	if (m==3) m=1;
+	if(m==1)
+		document.title="星期五";
+	else
+		document.title="星期六";}
+	function turncolors(){
+	title();
+	n++;
+	if(n==(Ac.length-1))n=0;
+	document.bgColor=Ac[n];
+	document.fgColor=Ac[n+1];
+	setTimeout("turncolors()",1000);}
+	turncolors();
+	function a(){
+	var a=document.getElementById("d1");
+	b.innerHTML="这是<b>我</b>的第一节javascript课，<br/>我很高兴！";}
+	function b(){
+	var b=document.createElement("div");
+	b.innerHTML="这学期我第二次见大家，<br/>我很高兴！";
+	document.body.appendChild(b);}
+
+
+	
+
+</script>
+</body>
+</html>

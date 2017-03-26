@@ -1,0 +1,40 @@
+<!Doctype>
+<html>
+<head>
+<style>
+.default{
+    border:1px solid #003a75;
+    background:yellow;
+    margin:5px;
+    width:90px;
+    height:35px;
+    float:left;
+    padding:5px;
+}
+.change{
+    background:#c50210;
+    color:#fff;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("input[type=button]").eq(0).click(function(){
+            $("div,#span").addClass("change");//,为兄弟关系,如div,#span表示选择div和id为span; 空格为父子关系
+        });
+    });//通过CSS命令改变类选择器的样式
+    function a(){
+        var d=document.getElementsByTagName("div")[0];
+        d.className=d.className + " change";
+    }//通过javascript改变样式
+
+</script>
+</head>
+<body>
+<p class="default">p元素</p>
+<div class="default">div元素</div>
+<span class="default" id="span">ID为span的元素</span>
+<input type="button" value="为div元素和ID为span的元素换肤" />
+<input type="button" value="CSS" onclick="a()" />
+</body>
+</html>

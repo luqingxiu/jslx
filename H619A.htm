@@ -1,0 +1,35 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<script  src="js/jquery-1.6.1.min.js"></script>
+<script src="jquery-ui.js" ></script>
+<style>
+.rd
+{
+	background:#F00;
+	}
+</style>
+<script>
+    $(function(){
+    var a=$("<p>明天是端午节</p>");
+  //  $(document.body).append(a);
+    a.insertAfter("#test");
+//    $(document.body).append("<div>后天是父亲节</div>");
+    $("<div>后天是父亲节</div>").insertAfter("#test");
+    var s=$("<h1></h1>");
+    s.html("大家要注意返校时间");
+  //  s.appendTo($(document.body));
+    s.insertAfter("#test");
+    $("h1").addClass("rd");
+    $("p").css({"border":"1px solid #00F","color":"#F00","font-size":"28px"});
+});
+  
+</script>
+</head>
+<body>
+<div id="test"></div>
+</body>
+
+
+</html>

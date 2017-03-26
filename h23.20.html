@@ -1,0 +1,69 @@
+<!Doctype>
+<html>
+<head>
+<style>
+.redBorder{
+    border:1px solid #f00;
+}
+.test1{
+    width:240px;
+    height:150px;
+    background:#cdf;
+    text-align:center;
+}
+.test2{
+    width:160px;
+    height:100px;
+    background:#ce0;
+    text-align:center;
+    line-height:20px;
+    margin:10px auto;
+}
+span{
+    width:100px;
+    height:35px;
+    background:#fff;
+    padding:20px;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $(".test1").mouseover(function(event){
+            $(".test1").addClass("redBorder");
+        });//加鼠标往上移的事件
+        $(".test1").mouseout(function(event){
+            $(".test1").removeClass("redBorder");
+        });
+        $(".test2").mouseover(function(event){
+            $(".test2").addClass("redBorder");
+            event.stopPropagation();//阻止事件往下传
+        });
+        $(".test2").mouseout(function(event){
+            $(".test2").removeClass("redBorder");
+        });
+        $("span").mouseover(function(event){
+            $("span").addClass("redBorder");
+             event.stopPropagation();//阻止事件往下传
+        });
+        $("span").mouseout(function(event){
+            $("span").removeClass("redBorder");
+        });
+    });
+
+</script>
+</head>
+<body>
+<div class="test1">
+    爷爷
+    <p class="test2">
+        爸爸<br /><br />
+        <span>
+            孩子
+        </span>
+    </p>
+</div>
+</body>
+
+
+</html>

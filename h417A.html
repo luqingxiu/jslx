@@ -1,0 +1,159 @@
+<!Doctype>
+<html>
+<head>
+<style>
+table{ border-collapse:collapse; }
+td{border:1px solid #666666;}
+th{background:#dddddd;border:1px solid #666666;}
+.ed
+{
+	position:absolute;
+	top:50px;left:100px;
+	border:0px solid #FFFFFF;
+	display:none;
+}
+</style>
+</head>
+<body>
+<table id="table1">
+<tr>
+<th>班级</th>
+<th>数学平均成绩</th>
+<th>语文平均成绩</th>
+</tr>
+<tr>
+<td>一年一班</td>
+<td>91</td>
+<td>90</td>
+</tr>
+<tr>
+<td>一年二班</td>
+<td>90</td>
+<td>85</td>
+</tr>
+
+</table>
+<input type="button" value="修改单元格信息" onclick="edit()" />
+<input type="text" id="celltext" class="ed" onblur="aa()" />
+<script>
+    var s=null;
+    function aa(){
+        if(s!=null)
+        {
+            var v=parseInt(celltext.value);
+            if (v<0 ||v>100)
+            {
+            alert("录入异常！");
+            return;
+            }
+            s.innerHTML=celltext.value;
+        }
+    }
+    function select(element){
+        var e,r,c;
+        if(element==null) e=event.srcElement;
+        else
+            e=element.toElement;
+        if(e.tagName=="TD"){
+            c=findCell(e);
+            if(c!=null){
+                var y=getOffsetY(c)+getScrollY(c);
+                celltext.style.top=y;
+                var x=getOffsetX(c)+getScrollX(c);
+                celltext.style.left=x;
+                celltext.style.width=c.clientWidth;
+                celltext.style.height=c.clientHeight;
+                celltext.value=c.innerHTML;
+                celltext.style.display="block";
+                if(s!=null) deselectRorC(s);
+                selectRorC(c);
+                s=c;
+             }
+         }
+         window.event.cancelBubble=true;
+    }
+    table1.onclick=select;
+    function findCell(e){
+        if(e.tagName=="TD") return e;
+        else if(e.tagName=="BODY") return null;
+        else
+            return findCell(e.parentElement);
+    }
+    function selectRorC(r){
+   //     r.style.backgroundColor="#0000FF";
+   //     r.style.color="#FFFFFF";
+    } 
+    function deselectRorC(r){
+        r.style.backgroundColor="";
+        r.style.color="";
+    }
+    function edit(){
+        var c,p,nr;
+        if(s==null) return false;
+        c=s;
+        if(c.tagName!="TD") return false;
+        celltext.style.display="";
+        celltext.value=c.innerHTML;
+        celltext.focus();
+        celltext.onblur=unhook;
+    }
+    function unhook(){
+        celltext.value="";
+        celltext.style.display="none";
+    }
+    function getScrollX(oE){
+        var iRet=0;
+        while(oE!=null && oE!=document.body){
+            try{
+                iRet+=oE.scrollLeft;
+                oE=oE.parentNode;
+            }
+            catch(err){oE=null;}
+        }
+        return iRet;
+    }
+    function getOffsetX(oE){
+        var iRet=0;
+        while(oE!=null){
+            try{
+                iRet+=oE.offsetLeft;
+                oE=oE.offsetParent;
+            }
+            catch(err){        oE=null;}
+        }
+        return iRet;
+    }
+    
+    function getScrollY(oE){
+        var iRet=0;
+        while(oE!=null && oE!=document.body){
+            try{
+                iRet+=oE.scrollTop;
+                oE=oE.parentNode;
+            }
+            catch(err)
+            {
+            oE=null;
+            }
+        }
+        return iRet;
+    }
+    function getOffsetY(oE){
+        var iRet=0;
+        while(oE!=null){
+            try{
+                iRet+=oE.offsetTop;
+                oE=oE.offsetParent;
+            }
+            catch(err)
+            {
+            oE=null;
+            }
+        }
+        return iRet;
+    }
+</script>
+</body>
+
+
+</html>

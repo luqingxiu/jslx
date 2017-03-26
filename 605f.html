@@ -1,0 +1,90 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+*{font-size:16px;}
+#dlg img{width:60px;height:60px;}
+</style>
+<script src="jquery-1.6.1.min.js"> </script>
+<script src="jquery-ui.js"></script>
+<link href="jquery-ui.css" rel="Stylesheet" />
+  
+<script>
+    $(function(){
+        $("#sfq").accordion();//变成手风琴格式
+        $("#sfq").width(200);//修改手风琴样式
+        $("#op").button();//修改打开按钮的样式
+        $("#dlg").dialog({
+            model:true,//模式对话框
+            autoOpen:false,width:400,height:200,
+            buttons:[
+            {text:"确定",
+               click:function(){
+                    $(this).dialog("close");
+               }
+            },
+            {text:"取消",
+               click:function(){
+                    $(this).dialog("close");
+               }
+             }
+            ]
+        });
+        $("#op").click(function(){
+            $("#dlg").dialog("open");
+        });
+        
+        $("#dt").datepicker({inline:true,
+         showMonthAfterYear:true, //年在前，月在后
+         yearSuffix:"年",        //添加后缀年
+         prevText:"上一月",       //鼠标放在翻月按钮上显示的文字
+         nextText:"下一月",//,
+         monthNames:["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],      //以中文显示月份
+         dayNamesMin:["日","一","二","三","四","五","六"], 
+         dateFormat:"yy-mm-dd"
+        });
+    });
+</script>
+</head>
+<body>
+<div id="sfq">
+<h3>我的信息</h3>
+<div>
+<a onclick="a('h21.1.html');"> 动态标题栏和背景自动变色</a><br />
+<a>点点滴滴</a><br />
+<a>生生世世</a><br />
+<a>红惺惺相惜</a><br />
+</div>
+<h3>我的爱好</h3>
+<div>
+<a>红红霍霍</a><br />
+<a>点点滴滴</a><br />
+<a>生生世世</a><br />
+<a>红惺惺相惜</a><br />
+</div>
+<h3>我的特长</h3>
+<div>
+<a>红红霍霍</a><br />
+<a>点点滴滴</a><br />
+<a>生生世世</a><br />
+<a>红惺惺相惜</a><br />
+</div>
+<h3>我的专业</h3>
+<div>
+<a>红红霍霍</a><br />
+<a>点点滴滴</a><br />
+<a>生生世世</a><br />
+<a>红惺惺相惜</a><br />
+</div>
+</div>
+
+
+<button id="op">打开</button>
+<div id="dlg" title="我的对话框">
+<img src="images/d.jpg" />
+马上要过端午节了，又是父亲节<br/>
+我想给爸爸买:<input type="text" id="text"/>
+</div>
+<input type="text" id="dt">
+</body>
+</html>

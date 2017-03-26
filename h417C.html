@@ -1,0 +1,28 @@
+﻿﻿
+<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+
+</head>
+<body>
+<script>
+    function createChild(){
+        var s=["第一节点","第二节点","第三节点","第四节点","第五节点","第六节点"];
+        var cdf=document.createDocumentFragment();
+        for (var i=0;i<s.length;i++){
+            var b=document.createElement("p");
+            var txt=document.createTextNode(s[i]);
+            b.appendChild(txt);
+            cdf.appendChild(b);
+        }
+        document.body.appendChild(cdf);
+    }
+    createChild();
+</script>
+</body>
+
+
+</html>

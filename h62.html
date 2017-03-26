@@ -1,0 +1,20 @@
+<!doctype>
+<html>
+<head>
+</head>
+<body onmousewheel="aa()"> 
+<img id="pic1" src="image/a1.jpg" onmousewheel="bigimg(this)" />
+<script>
+function aa(){
+    bigimg(pic1);
+    }
+    function bigimg(i){
+    var zoom=parseInt(i.style.zoom,10)||100;
+    zoom+=event.wheelDelta/12;
+    if(zoom>0)
+        i.style.zoom=zoom+'%';
+       
+}
+</script>
+</body>
+</html>

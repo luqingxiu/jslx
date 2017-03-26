@@ -1,0 +1,30 @@
+<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>  
+<script>
+    $(document).ready(function(){
+        $("input[type=button]").click(function(){
+            //$("#div1").empty();//empty()把节点清空，但节点的框架还在
+            $("#div1").replaceWith("<div>***方法的替换结果</div>");
+            $("#div2").remove();//remove()彻底把节点删除了
+            $(this).clone().insertAfter(this);//clone()复制节点
+            });
+
+    });
+
+</script>
+</head>
+<body>
+div1:
+<div id="div1"<span style="color:#900">谁言寸草心，报得三寸辉</span></div>
+div2:
+<div id="div2"<span style="color:#990">谁言寸草心，报得三寸辉</span></div>
+<input type=button value="执行" />
+</body>
+
+
+</html>

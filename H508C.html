@@ -1,0 +1,47 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+#bottom
+{background:#999999;
+ width:800px;
+ height:58px;
+ clear:both;
+ text-align:center;
+ padding-top:10px;
+ font-size:14px;
+}
+.input
+{
+	font-size:12pt;
+	color:#333333;
+	background:#cef;
+	border:1px solid #000000;
+}
+</style>
+<script  src="js/jquery-1.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+       $("label+p").css("background","red");
+        });
+</script>
+</head>
+<body>
+<div>
+<label>第一个Label</label>
+<p>第一个p</p>
+<fieldset>
+<label>第二个Label</label>
+<p>第二p</p>
+</fieldset>
+</div>
+<label></label>
+<br />
+    <p>外面的p</p>
+
+</body>
+
+
+</html>

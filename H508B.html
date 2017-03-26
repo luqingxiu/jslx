@@ -1,0 +1,57 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+#bottom
+{background:#999999;
+ width:800px;
+ height:58px;
+ clear:both;
+ text-align:center;
+ padding-top:10px;
+ font-size:14px;
+}
+.input
+{
+	font-size:12pt;
+	color:#333333;
+	background:#cef;
+	border:1px solid #000000;
+}
+</style>
+<script  src="js/jquery-1.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#change").click(function(){
+            $("form >input").addClass("input");
+        });
+        $("#default").click(function(){
+            $("form>input").removeClass("input");
+        });
+        });
+</script>
+</head>
+<body>
+<form id="form1" name="form1" method="post">
+姓&nbsp;&nbsp;名<input type="text" name="nm" id="nm" />
+<br />
+籍&nbsp;&nbsp;贯<input type="text" name="native" id="native" />
+<br />
+生&nbsp;&nbsp;日<input type="text" name="birthday" id="birthday" />
+<br />
+e-Mail<input type="text" name="email" id="email" />
+<br />
+<span>
+<input type="button" id="change" value="换肤" />
+</span>
+<span>
+<input type="button" id="default" value="回复默认" />
+</span>
+</form>
+
+</body>
+
+
+</html>

@@ -1,0 +1,95 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+    #fm1
+    {
+    	border:1px solid #dddddd;
+    	width:300px;
+    }
+    .box
+    {
+    	margin-top:15px;
+    	border-top:1px solid #999999;
+    }
+</style>
+
+</head>
+<body>
+<script>
+//{}  对象   for (var c in s)     
+//[]集合     for (var i=0;i<s.length;i++)
+var s={"广东省":{"广州市":["花都区","海珠区","天河区","黄埔区"],
+                "深圳市":["福田区","罗湖区","南山区","宝安区"],
+                "珠海市":["香洲区","拱北区","斗门区"]},
+        "湖南省":{"长沙市":["aaa","bbb","ccc"],
+                  "株洲市":["ABAB","BCBC"],
+                  "湘潭市":["123","321","555"]},
+        "广西省":{"南宁市":["ASA","4SSD"],
+                "桂林市":["MKAS","1322"],"北海市":["XXXX","yyyy"]}
+}
+
+    for(var d in s){
+        document.write("<br/>"+d+":<br/>");
+        for (var m in s[d]){
+            document.write(m+":");
+            for(var i in s[d][m]){
+                    document.write(s[d][m][i]+",");
+                }
+            document.write("<br/>");
+            }
+    }
+
+    function addText(){
+        var box=document.createElement("div");
+        var lbl=document.createElement("Label");
+        lbl.innerHTML="学号";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.appendChild(txt);
+        box.className="box"
+        fm1.appendChild(box);
+        
+        var box=document.createElement("div");
+        var lbl=document.createElement("Label");
+        lbl.innerHTML="姓名";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.className="box"
+        box.appendChild(txt);
+        fm1.appendChild(box);
+        
+        var box=document.createElement("div");
+         var lbl=document.createElement("Label");
+        lbl.innerHTML="性别";
+        box.appendChild(lbl);
+        var txt=document.createElement("input");
+        txt.type="text";
+        txt.name="txt";
+        txt.value="";
+        box.className="box"
+        box.appendChild(txt);       
+        fm1.appendChild(box);       
+           
+            }
+</script>
+<div id="fm1">
+</div>
+
+<input type="button" value="Go" onClick="addText()" />
+
+
+<script>
+
+</script>
+</body>
+
+
+</html>

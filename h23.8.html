@@ -1,0 +1,43 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+td
+{font-size:12px;
+ padding:3px;
+}
+.th{
+    background:#B6DF48;
+    font-weight:bold;
+    text-align:center;
+}
+.r0
+{background:#E8F3D1;
+}
+.r1
+{
+	background:#F9FCEF;
+}
+.light{background:#00A1DA;}
+</style>
+<script  src="js/jquery-1.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var p1=$("<p></p>");
+        p1.html("<span style='color:#F00'>方法一添加的内容</span>");
+        $("body").append(p1);
+        var p2=$("<p><span style='color:#F00'>方法二添加的内容</span></p>");
+        $("body").append(p2);
+        $("body").append("<p><span style='color:#F00'>方法三添加的内容</span></p>");
+        $("body").prepend("<p><span style='color:#00F'>方法4添加的内容</span></p>");
+         });
+</script>
+</head>
+<body>
+
+</body>
+
+
+</html>

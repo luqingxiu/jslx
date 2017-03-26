@@ -1,0 +1,41 @@
+<!Doctype>
+<html>
+<head>
+<style>
+.blue{
+    color:#00f;
+    border:1px solid #666;
+    background:#f00;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $("input[type=button]").bind("click",function(event,s){
+        //$("input[type=button]").one("click",function(){
+            $("body").append("<div id=aaa>今天下雨</div>");
+            $("body").prepend("<p>心情非常好</p>");
+            $("<h2>2015-5-22 14:00 上课</h2>").appendTo("body");//把主语和定语颠倒
+            $("<h2>幸好我带伞了</h2>").prependTo("#aaa");
+            if(s!=undefined)
+                $("body").prepend("<div>"+s+"</div>");
+        }).trigger("click","明天我过节");//.trigger("click")为模拟用户操作
+        $("button").click(function(){
+           // $("div").css("color","#ff0000");
+          // $("div").addClass("blue");//增加样式或对样式进行处理
+           //$("div").toggleClass("blue");//当没这个样式就添加，有就删除
+            $("div").addClass("blue", true);//如果ture就增加，增加后不变
+            //alert($("div").val());
+        });
+    });
+
+</script>
+</head>
+<body>
+<input type="button" value="生成" />
+<button>改变</button>
+
+</body>
+
+
+</html>

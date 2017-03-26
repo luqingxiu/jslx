@@ -1,0 +1,29 @@
+<!Doctype>
+<html>
+<head>
+<style>
+input[type=button]{
+    width:300px;
+    background:#0000ff;
+    color:#fff;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("input[type=button]").click(function(){
+            var s=$("#txt").val();
+            alert(s);
+        });
+    });//jquery
+    function a(){
+        var s=document.getElementById("txt").value;
+        alert("ÎåÒ»½Ú"+s);
+    }//javascript
+</script>
+</head>
+<body>
+    <input type="text" id="txt" name="test" value="" />
+    <input type="button" value="OK" onclick="a()" />
+</body>
+</html>

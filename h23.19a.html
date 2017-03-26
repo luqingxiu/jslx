@@ -1,0 +1,31 @@
+<!Doctype>
+<html>
+<head>
+<style>
+#a{
+    color:#00f;
+    border:1px solid #666;
+    background:#f00;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $("#a").hover(
+            function(){
+                $("#b").html("好好好！");},//hover是一个函数，一个函数有两个参数一个是鼠标移进去的参数，一个是移出来的参数
+            function(){
+                $("#b").html("还可以！");}
+        );
+
+    });
+
+</script>
+</head>
+<body>
+<div id="a">aaaaaaaa</div>
+<div id="b"></div>
+</body>
+
+
+</html>

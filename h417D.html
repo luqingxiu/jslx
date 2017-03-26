@@ -1,0 +1,37 @@
+﻿﻿
+<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+
+</head>
+<body>
+<script>
+    function crNode(str){
+        var newp=document.createElement("p");
+        var txt=document.createTextNode(str);
+        newp.appendChild(txt);
+        return newp;
+    }
+    function insertNode(nodeid,str){
+        var node=document.getElementById(nodeid);
+        var newnode=crNode(str);
+        if(node.parentNode)
+            node.parentNode.insertBefore(newnode,node);
+    }
+    function aa(){
+        if(window.event.keyCode==13){
+            insertNode('h',txt.value);
+            txt.value="";
+            }
+    }
+</script>
+<h2 id="h">在上面插入节点</h2>
+输入文本：<input type="text" id="txt"  onkeypress="aa();"/>
+<input type="button" value="前插入" onclick="insertNode('h',txt.value)"; />
+</body>
+
+
+</html>

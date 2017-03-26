@@ -1,0 +1,93 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+td
+{font-size:12px;
+ padding:3px;
+}
+.th{
+    background:#B6DF48;
+    font-weight:bold;
+    text-align:center;
+}
+.r0
+{background:#E8F3D1;
+}
+.r1
+{
+	background:#F9FCEF;
+}
+.light{background:#00A1DA;}
+</style>
+<script  src="js/jquery-1.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("tr:even").addClass("r0");
+        $("tr:odd").addClass("r1");
+        $("tr:first").removeClass("r0");
+        $("tr:first").addClass("th");
+        //$("td:parent").css("background","#cccccc");
+        $("tbody tr").hover(
+            function(){
+                $(this).addClass("light");},
+            function(){
+                $(this).removeClass("light");}                
+        );
+        $("td:empty").html("妈妈,对不起,迟到的祝福！");
+        $("td:contains('妈妈')").css("color","#FF0000");
+        $("td:has('b')").css("background","#f00");
+        });
+</script>
+</head>
+<body>
+
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#3F873B">
+<thead>
+<tr>
+<td width="11%" height="27">编号</td>
+<td width="14%" height="27">祝福对象</td>
+<td width="12%" height="27">祝福者</td>
+<td width="32%" height="27">字条内容</td>
+<td width="30%" height="27">发送时间</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td height="27">1</td>
+<td>妈妈</td>
+<td>铁蛋</td>
+<td>祝妈妈母亲节快乐</td>
+<td>2015-5-10</td>
+</tr>
+
+<tr>
+<td height="27">2</td>
+<td>妈妈</td>
+<td><b>嘟嘟</b></td>
+<td>祝妈妈母亲节快乐</td>
+<td>2015-5-10</td>
+</tr>
+<tr>
+<td height="27">3</td>
+<td>妈妈</td>
+<td>铁蛋</td>
+<td>祝妈妈母亲节快乐</td>
+<td>2015-5-10</td>
+</tr>
+<tr>
+<td height="27">4</td>
+<td>妈妈</td>
+<td>三柱</td>
+<td></td>
+<td>2015-5-10</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+
+
+</html>

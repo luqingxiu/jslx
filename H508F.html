@@ -1,0 +1,49 @@
+﻿﻿
+﻿<!Doctype>
+<html>
+<head>
+<style>
+td
+{font-size:12px;
+ padding:3px;
+}
+.th{
+    background:#B6DF48;
+    font-weight:bold;
+    text-align:center;
+}
+.r0
+{background:#E8F3D1;
+}
+.r1
+{
+	background:#F9FCEF;
+}
+.light{background:#00A1DA;}
+</style>
+<script  src="js/jquery-1.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var s1=$("input:visible").val();
+        var s2=$("input:hidden:eq(0)").val();
+        var s3=$("input:hidden:eq(1)").val();
+    //    alert(s1+"\n\r"+s2+"\n\r"+s3);
+        $("input:checked").css("background","#F00");
+        $("input[type=radio]").eq(1).attr("checked","checked");
+        });
+</script>
+</head>
+<body>
+<input type="text" value="显示的input元素" />
+<input type="text" value="我是不显示的input元素" style="display:none"/>
+<input type="hidden" value="我是隐藏域" />
+<input type="radio" name="sex" />男 <input type="radio" name="sex" />女
+<br />
+复选框1：<input type="checkbox" value="AAA" />
+复选框2：<input type="checkbox"  value="BBB" />
+复选框3：<input type="checkbox"  value="CCC" />
+</body>
+
+
+</html>

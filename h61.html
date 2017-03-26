@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body> 
+<table id="table1" border="1px" cellpadding="0px" bordercolor="#000000">
+<tr>
+<td>
+本实例将限制单元格的宽度时，当信息超出单元格的宽度时，单元格的高度将增大，而宽度却不向两边扩展
+</td>
+</tr>
+</table>
+<input type="button" value="变形" onclick="a()" />
+<script>
+function a(){
+var w=180;
+var h=50;
+table1.align="Center";
+table1.width=w;
+table1.height=h;
+table1.style.tableLayout="fixed";
+}
+</script>
+</body>
+</html>

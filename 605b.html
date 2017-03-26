@@ -1,0 +1,51 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+<script src="jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $("input[type=button]").click(save);
+        function save(){
+            var sno=$("#sno").val();
+            var h=$("#hobby").val();
+            var n=$("#name").val();
+            var sql="UPDATE student SET 爱好='"+h+"' WHERE 学号='"+sno+"'";
+            var sql="UPDATE student SET 姓名='"+n+"' WHERE 学号='"+sno+"'";
+            $.ajax({type:"get",
+                url:"http://114.215.171.206/lyh/ajax/ajax.php",
+                dataType:"jsonp",
+                data:"sql="+sql,
+                jsonp:"",
+                jsonpCallback:"jsonpCallback",
+                success:function(json){
+                    var status=json.status;
+                    if(status==0){
+                        alert("修改成功！");
+                    }
+                     else
+                        alert(json.errmsg);   
+                },
+                error:function(a,b,c){
+                        alert("查询失败");
+                }
+            
+            });       
+        }
+    });//修改数据库中的爱好
+
+</script>
+</head>
+<body>
+学号：<input type="text" id="sno" /><br />
+爱好：<input type="text" id="hobby" /><br />
+姓名：<input type="text" id="name" /><br />
+
+<input type="button" value="修改" />
+
+</body>
+
+
+</html>

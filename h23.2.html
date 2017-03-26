@@ -1,0 +1,33 @@
+<!Doctype>
+<html>
+<head>
+<style>
+input[type=button]{
+    width:300px;
+    background:#0000ff;
+    color:#fff;
+}
+</style>
+<script src="js/jquery-1.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("input[type=button]").eq(0).click(function(){
+            $("div").eq(0).html("<img src='image/strawberry1.jpg' />这里长出了一片草莓");//eq:等于
+            $("div").get(1).innerHTML="<img src='image/fish1.jpg' />这里的鱼被偷吃了";//eq:等于
+        });//eq(0)表示第一个有效
+    });//jquery
+    function a(){
+        var s=document.getElementsByTagName("div");
+        s[0].innerHTML="<img src='image/strawberry.jpg' />这里种植了一颗草莓";
+        s[1].innerHTML="<img src='image/fish.jpg' />这里养殖了一条鱼";
+    }//javascript
+</script>
+</head>
+<body>
+<div><img src="image/strawberry.jpg" />这里种植了一颗草莓</div>
+<div><img src="image/fish.jpg" />这里养殖了一条鱼</div>
+    <input type="button" value="若干年后"/>
+    <input type="button" value="变回去" onclick="a()"/>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+
+</head>
+<body>
+<script>
+    function Animal(config){
+        this.init(config);
+    }
+    Animal.prototype.name="";
+    Animal.prototype.legs=2;
+    Animal.prototype.type="";
+    Animal.prototype.init=function(config){
+        for(p in config)
+            this[p]=config[p];
+    }
+    Animal.prototype.jump=function(s){
+        if (this.type=="哺乳动物")
+            alert(this.name +"跳"+s+"米");
+        else if (this.type=="鸟类")
+            alert(this.name +"飞"+s+"公里");
+        else if (this.type=="鱼类")
+            alert(this.name +"游"+s+"公里");
+    }
+    var a1=new Animal({name:"狗",legs:4,type:"哺乳动物"});
+    a1.jump(100);
+    var a2=new Animal({name:"海鸥",legs:2,type:"鸟类"});
+    a2.jump(200);
+    var a3=new Animal({name:"草鱼",legs:2,type:"鱼类"});
+    a3.jump(200);
+
+</script>
+</body>
+
+
+</html>

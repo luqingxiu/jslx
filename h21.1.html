@@ -1,0 +1,53 @@
+﻿<!Doctype>
+<html>
+<head>
+<style>
+
+</style>
+<script src="js/jquery-1.6.1.min.js"> </script>  
+<script>
+    $(function(){
+        $("input[type=button]").click(save);
+        function save(){
+            var sno=$("#sno").val();//把学号采集起来
+            var n=$("#name").val();
+            var s=$("#sex").val();
+            var m=$("#mail").val();
+            var t=$("#tel").val();
+            var q=$("#qq").val();
+            var nt=$("#native").val();
+            var h=$("#hobby").val();
+            var b=$("#birthday").val(); 
+            var sql="INSERT INTO student(学号,姓名,性别,邮箱,手机,QQ,籍贯,爱好,出生年月)"+
+            "VALUES('"+sno+"','"+n+"','"+s+"','"+m+"','"+t+"','"+q+"','"+nt+"','"+h+"','"+b+"');"; 
+            $.ajax({type:"get",
+                url:"http://114.215.171.206/lyh/ajax/ajax.php",
+                dataType:"jsonp",
+                data:"sql="+sql,
+                jsonp:"",
+                jsonpCallback:"jsonpCallback",
+                success:function(json){
+                        alert("存盘成功");
+                },
+                error:function(a,b,c){
+                        alert("重复插入"+json.errmsg);
+                }
+            });       
+        }
+    });
+
+</script>
+</head>
+<body>
+学号：<input type="text" id="sno" /><br />
+姓名：<input type="text" id="name" /><br />
+性别：<input type="text" id="sex" /><br />
+邮箱：<input type="text" id="mail" /><br />
+手机：<input type="text" id="tel" /><br />
+QQ：<input type="text" id="qq" /><br />
+籍贯：<input type="text" id="native" /><br />
+爱好：<input type="text" id="hobby" /><br />
+出生年月：<input type="text" id="birthday" /><br />
+<input type="button" value="保存" />
+</body>
+</html>
